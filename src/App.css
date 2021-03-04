@@ -1,0 +1,22 @@
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.video {
+  position: absolute;
+}
+
+.videoError {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoError h2 {
+  color: #fff;
+}

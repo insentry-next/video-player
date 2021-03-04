@@ -1,0 +1,503 @@
+{
+  "ForbiddenAreaDetectorThermal": {
+    "classes": [
+      {
+        "id": "motion",
+        "name": "Движение"
+      }
+    ],
+    "states": [
+      {
+        "id": "zone",
+        "name": "Запрещенная зона",
+        "type": "float"
+      },
+      {
+        "id": "alarm",
+        "name": "Человек в запрещенной зоне",
+        "type": "bool"
+      },
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "MotionCameraDetector": {
+    "states": [
+      {
+        "id": "MotionAlarm",
+        "name": "Движение в кадре",
+        "type": "bool"
+      }
+    ]
+  },
+  "DahuaThermalDetector": {
+    "states": [
+      {
+        "id": "highTemp",
+        "name": "Максимальная температура",
+        "type": "float"
+      },
+      {
+        "id": "isOverTemp",
+        "name": "Температура превышена",
+        "type": "bool"
+      },
+      {
+        "id": "isIncorrectTemp",
+        "type": "bool"
+      }
+    ]
+  },
+  "LightQueueCounter": {
+    "classes": [
+      {
+        "id": "person",
+        "name": "Человек"
+      },
+      {
+        "id": "markup",
+        "name": "Зона интереса",
+        "states": [
+          {
+            "id": "queueSize",
+            "type": "float"
+          },
+          {
+            "id": "serviceRate",
+            "type": "float"
+          },
+          {
+            "id": "peopleServed",
+            "type": "float"
+          },
+          {
+            "id": "queueArea",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "current_queue",
+        "name": "Длина очереди",
+        "type": "float"
+      },
+      {
+        "id": "alarm",
+        "name": "Очередь переполнена",
+        "type": "bool"
+      },
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "HelmetDetector": {
+    "classes": [
+      {
+        "id": "head",
+        "name": "Голова"
+      }
+    ],
+    "states": [
+      {
+        "id": "alarm",
+        "name": "Человек без каски",
+        "type": "bool"
+      }
+    ]
+  },
+  "HeatmapDetector": {
+    "states": [
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "TamperingCameraDetector": {
+    "states": [
+      {
+        "id": "ImageTooBlurry",
+        "name": "Изображение слишком размытое",
+        "type": "bool"
+      },
+      {
+        "id": "ImageTooDark",
+        "name": "Изображение слишком тёмное",
+        "type": "bool"
+      },
+      {
+        "id": "ImageTooBright",
+        "name": "Изображение слишком яркое",
+        "type": "bool"
+      },
+      {
+        "id": "GlobalSceneChange",
+        "name": "Сцена изменилась",
+        "type": "bool"
+      },
+      {
+        "id": "SignalLoss",
+        "name": "Сигнал потерян",
+        "type": "bool"
+      }
+    ]
+  },
+  "InSentryFaceDetector": {
+    "states": [
+      {
+        "id": "userFullName",
+        "name": "ФИО человека",
+        "type": "string"
+      }
+    ]
+  },
+  "AbandonObjects": {
+    "classes": [
+      {
+        "id": "lobj",
+        "name": "Оставленный предмет",
+        "states": [
+          {
+            "id": "downgrade",
+            "name": "время без детекций",
+            "type": "float"
+          },
+          {
+            "id": "resent_detections",
+            "name": "кол-во детекций",
+            "type": "float"
+          }
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "alarm",
+        "name": "Обнаружен бесхозный предмет",
+        "type": "bool"
+      },
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "QueueCounter": {
+    "classes": [
+      {
+        "id": "markup",
+        "name": "Зона интереса",
+        "states": [
+          {
+            "id": "queueSize",
+            "name": "Количество людей в очереди",
+            "type": "float"
+          },
+          {
+            "id": "serviceRate",
+            "type": "float"
+          },
+          {
+            "id": "peopleServed",
+            "type": "float"
+          },
+          {
+            "id": "queueArea",
+            "type": "string"
+          },
+          {
+            "id": "alarm_service_time",
+            "type": "bool"
+          },
+          {
+            "id": "alarm_people_counter",
+            "type": "bool"
+          }
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "FallDetector": {
+    "states": [
+      {
+        "id": "alarm",
+        "name": "Падение на кадре",
+        "type": "bool"
+      }
+    ]
+  },
+  "HumanCounter": {
+    "classes": [
+      {
+        "id": "human",
+        "name": "человек"
+      }
+    ],
+    "states": [
+      {
+        "id": "entrance_count",
+        "name": "Вошло",
+        "type": "float"
+      },
+      {
+        "id": "exited_count",
+        "name": "Вышло",
+        "type": "float"
+      },
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "AgeGenderEmotionDetector": {
+    "classes": [
+      {
+        "id": "face",
+        "name": "Лицо",
+        "states": [
+          {
+            "id": "emotion",
+            "name": "Эмоция",
+            "type": "string"
+          },
+          {
+            "id": "gender",
+            "name": "Пол",
+            "type": "string"
+          },
+          {
+            "id": "age",
+            "name": "Возраст",
+            "type": "float"
+          },
+          {
+            "id": "main_emotion",
+            "name": "Основная эмоция",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "crossing",
+        "name": "Пересечение линии сбора статистики персоны без данных о поле, возрасте и эмоциях",
+        "type": "bool"
+      },
+      {
+        "id": "alarm",
+        "name": "Пересечение линии сбора статистики персоны с собранной статистикой о поле, возрасте и эмоциях",
+        "type": "bool"
+      },
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "HumanTrafficCounter": {
+    "classes": [
+      {
+        "id": "entrance_detection",
+        "name": "Вошедшие люди"
+      },
+      {
+        "id": "exit_detection",
+        "name": "Вышедшие люди"
+      }
+    ],
+    "states": [
+      {
+        "id": "entrance_count",
+        "name": "Вошло",
+        "type": "float"
+      },
+      {
+        "id": "exited_count",
+        "name": "Вышло",
+        "type": "float"
+      },
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "EventDetector": {},
+  "CarPlateDetector": {
+    "classes": [
+      {
+        "id": "plate",
+        "name": "Гос. номер",
+        "states": [
+          {
+            "id": "plate",
+            "name": "Номер",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "states": [
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "FireDetector": {
+    "classes": [
+      {
+        "id": "fire",
+        "name": "Огонь"
+      }
+    ],
+    "states": [
+      {
+        "id": "alarm",
+        "name": "Обнаружен огонь",
+        "type": "bool"
+      },
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "TamperingDetector": {
+    "states": [
+      {
+        "id": "detection_edge",
+        "name": "Заслонение или расфокусировка",
+        "type": "bool"
+      },
+      {
+        "id": "detection_shift",
+        "name": "Тряска или сдвиг",
+        "type": "bool"
+      }
+    ]
+  },
+  "ForbiddenDirectionDetector": {
+    "classes": [
+      {
+        "id": "motion_dis",
+        "name": "Движение"
+      }
+    ],
+    "states": [
+      {
+        "id": "motion",
+        "name": "Движение на сцене",
+        "type": "bool"
+      }
+    ]
+  },
+  "CrowdDetector": {
+    "classes": [
+      {
+        "id": "cluster",
+        "name": "Кластер"
+      }
+    ],
+    "states": [
+      {
+        "id": "alarm",
+        "name": "Детекция толпы",
+        "type": "bool"
+      },
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "MotionDetector": {
+    "classes": [
+      {
+        "id": "motion",
+        "name": "Детекция движения"
+      }
+    ],
+    "states": [
+      {
+        "id": "motion_in_zone",
+        "name": "Движение в зоне",
+        "type": "bool"
+      },
+      {
+        "id": "counter",
+        "name": "Счетчик времени реагирования",
+        "type": "float"
+      }
+    ]
+  },
+  "ForbiddenAreaDetector": {
+    "classes": [
+      {
+        "id": "motion",
+        "name": "Движение"
+      }
+    ],
+    "states": [
+      {
+        "id": "zone",
+        "name": "Запрещенная зона",
+        "type": "float"
+      },
+      {
+        "id": "alarm",
+        "name": "Человек в запрещенной зоне",
+        "type": "bool"
+      },
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  },
+  "VehicleDetector": {
+    "classes": [
+      {
+        "id": "vehicle",
+        "name": "Транспортное средство"
+      },
+      {
+        "id": "mask",
+        "name": "Маска"
+      }
+    ],
+    "states": [
+      {
+        "id": "is_optimization",
+        "name": "Производится оптимизация детекторов",
+        "type": "bool"
+      }
+    ]
+  }
+}
