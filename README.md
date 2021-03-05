@@ -1,2 +1,2 @@
 # video-player
-Плеер для сервисов InSentry
+Видеоплеер для сервисов InSentry
