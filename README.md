@@ -37,4 +37,5 @@ import VideoPlayer from 'web-video-player'
 />
 ```
 
-## [Пример](https://github.com/insentry-next/video-player/blob/main/src/App.js)
+## Пример
+В папке [src](https://github.com/insentry-next/video-player/blob/main/src/App.js) можно найти пример подключения и настройки плеера
