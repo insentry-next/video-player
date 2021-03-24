@@ -12,14 +12,14 @@ npm install web-video-player rxjs lodash webstomp-client
 
 ## Начало работы
 
-1) Импортировать плеер на страницу
+Импортировать плеер на страницу
 
 ```jsx
 import React from 'react'
 import VideoPlayer from 'web-video-player'
 ```
 
-2) Для получения видео с камеры необходимо передать пллеру урлы служб Spot и Cast, UUID камеры, на которой настроена видеоаналитика и токен пользователя Watch
+Для получения видео с камеры необходимо передать пллеру урлы служб Spot и Cast, UUID камеры, на которой настроена видеоаналитика и токен пользователя Watch
 
 ```jsx
 <VideoPlayer
@@ -36,3 +36,5 @@ import VideoPlayer from 'web-video-player'
   height={320}
 />
 ```
+
+## [Пример](https://github.com/insentry-next/video-player/blob/main/src/App.js)
